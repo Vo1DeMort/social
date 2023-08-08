@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="card mb-3">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{user.username}}</h5>
+      <p class="card-text">Bio:{{profile.profile_bio}}</p>
+      <p class="card-text">Date of birth:{{profile.date_of_birth}}</p>
+      <p class="card-text">Page Link:{{profile.page_link}}</p>
+
+      <p class="card-text">joined since :{{profile.joined}}</p>
+      <a href ="{% url 'edit_profile' %}">Edit profile</a>
+      <br>
+      <a href ="#" >Post your story</a>
+    
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+
+{% endblock %}
